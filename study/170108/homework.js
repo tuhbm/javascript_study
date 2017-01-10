@@ -10,12 +10,14 @@ function sum(arr){
 function max(arr) {
     var result = arr[0];
     for (var i = 0; i < arr.length; i++) {
-        arr[i] > arr[i+1] ? result=arr[i] : result=arr[i+1];
-        console.log(result);
+        result < arr[i] ? result=arr[i] : result;
     }
     return result;
 }
 
+function sumIf(arr, target){
+
+}
 
 
 //4 번문제
@@ -58,23 +60,23 @@ describe('콜백함수를 익히자', function() {
 
 
 describe('170108 과제', function() {
-    it('배열의 숫자를 모두 더하는 sum 함수를 만드시오 - 수호님', function() {
+    it('1. 배열의 숫자를 모두 더하는 sum 함수를 만드시오 - 수호님', function() {
         expect( sum([1,2,3,4,5,6,7,8,9,10]) ).toBe(55)
         expect( sum([10,20,77,3,12,8]) ).toBe(130)
     });
-    it('배열에서 가장 큰 숫자를 찾는 max 함수를 만드시오 - 수호님', function() {
+    it('2. 배열에서 가장 큰 숫자를 찾는 max 함수를 만드시오 - 수호님', function() {
         expect( max([1,2,4,10,3,7]) ).toBe(10)
         expect( max([2,10,-5,19,-4,20,12]) ).toBe(20)
     });
-    it('특정 숫자 이상의 숫자만 합산하는 sumif 함수를 만드시오 - 수호님', function() {
+    it('3. 특정 숫자 이상의 숫자만 합산하는 sumif 함수를 만드시오 - 수호님', function() {
         expect( sumIf([4,5,2,1,5,6,4,7], 6) ).toBe(13)
         expect( sumIf([3,-4,1,9,10,20], 10) ).toBe(30)
     });
-    it('isZero 함수를 만드세요 - 욱님', function() {
+    it('5. isZero 함수를 만드세요 - 욱님', function() {
         expect( isZero(0).toBe(true) )
         expect( isZero(!0).toBe(false) ) //!0는 0이외의 수
     });
-    it('isNum 함수를 만드세요 - 욱님', function() {
+    it('6. isNum 함수를 만드세요 - 욱님', function() {
         expect( isNum(0).toBe(true) )
         expect( isNum('0').toBe(false) )
     });
