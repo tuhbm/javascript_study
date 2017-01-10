@@ -8,9 +8,9 @@ function sum(arr){
 
 
 function max(arr) {
-    var result = 0;
+    var result = arr[0];
     for (var i = 0; i < arr.length; i++) {
-        arr[i] > arr[i+1] ? result == arr[i] : result == arr[i+1];
+        arr[i] > arr[i+1] ? result=arr[i] : result=arr[i+1];
         console.log(result);
     }
     return result;
