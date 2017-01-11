@@ -15,10 +15,13 @@ function max(arr) {
     return result;
 }
 
-function sumIf(arr, target){
-
+function sumIf(arr,target){
+    var result = 0;
+    for(var i = 0;i < arr.length;i++){
+        if(arr[i]>=target) result+=arr[i];
+    }
+    return result;
 }
-
 
 //4 번문제
 var inventory = [
