@@ -35,7 +35,7 @@ var inventory = [
 ];
 function findIndex(arr,callback){
     for(var i = 0; i > arr.length; i++){
-        if(arr[i].name) return 1;
+        if(arr[i].name == callback) return 1;
     }
 }
 describe('콜백함수를 익히자', function() {
