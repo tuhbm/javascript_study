@@ -75,6 +75,30 @@ var inventory = [
     {name: 'grapes', quantity: 10},
     {name: 'strawberries', quantity: 8}
 ];
+function max2(arr){
+    var length = arguments.length;
+    //console.log(length);
+    var result = arr[0];
+    var array = arr;
+    //console.log(length);
+    if(length = 1){
+        for (var i = 0; i < arr.length; i++) {
+            console.log(arr.length);
+            if(arr[i] > result) result = arr[i];
+            console.log(result);
+            return result;
+
+        }
+        return result;
+    }else{
+        for (var i = 0; i < arr.length; i++) {
+            //console.log(array[0]);
+            if(arr[i] >= result) result = arr[i];
+            //console.log(result);
+        }
+    }
+    return result
+}
 //인벤토리의 네이임이 바나나 면 1 리턴해라
 //인벤토리의 네이임이 체리 면 1 리턴해라
 describe('콜백함수를 익히자', function() {
@@ -92,6 +116,18 @@ describe('콜백함수를 익히자', function() {
     });
 });
 describe('170108 과제', function() {
+    it('1. 배열의 숫자를 모두 더하는 sum2 함수를 만드시오 - 수호님', function() {
+        expect( sum2( 23,2,3,4,5,6,7,8,9,10) ).toBe(55)
+        expect( sum2( [23,2,3,4,5,6,7,8,9,10]) ).toBe(55)
+    });
+    it('1. 배열의 숫자를 모두 더하는 max2 함수를 만드시오 - 수호님', function() {
+        expect( max2( 11,2,3,4,5,23,7,8,9,10) ).toBe(23)
+        expect( max2( [11,2,3,4,5,23,7,8,9,10]) ).toBe(23)
+    });
+    it('1. 배열의 숫자를 모두 더하는 min2 함수를 만드시오 - 수호님', function() {
+        expect( min2( 1,2,3,4,5,6,7,8,9,10) ).toBe(1)
+        expect( min2( [1,2,3,4,5,6,7,8,9,10]) ).toBe(1)
+    });
     it('1. 배열의 숫자를 모두 더하는 sum 함수를 만드시오 - 수호님', function() {
         expect( sum( [1,2,3,4,5,6,7,8,9,10]) ).toBe(55)
         expect( sum( [10,20,77,3,12,8]) ).toBe(130)
