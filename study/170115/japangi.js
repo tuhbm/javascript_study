@@ -51,4 +51,10 @@ var japangiAction ={
 }
 
 
+<<<<<<< HEAD
 //japangiAction.getDrink(japangi1)
+=======
+//japangiAction.getDrink(japangi1)
+
+
+>>>>>>> 3b70edbbbd1bfb1dd89184b6b3ea471e77aea80f
