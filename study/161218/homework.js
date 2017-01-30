@@ -137,7 +137,7 @@ circle(max(a,b));
 //단일책임의 원칙
 //코드를 잘짜는것은 좋은코드를 알아야한다
 //좋은코드(SOLID)원칙
-circle(max(a,b));
+circleFinal(max(a,b));
 
 
 //9번문제 html 엘리먼트 이름과 텍스트를 문자열로 입력받아, 이를 조합하여 반환하는 createElement
@@ -156,7 +156,7 @@ function createElementFinal(tag, text){
 
 //10번문제 9번의 createElement함수를 응용하여 다음의 조건을 만족하시오9번의 createElement함수를 응용하여 다음의 조건을 만족하시오
 //설명
-createElement('div',createElement('p', '반갑습니다'));
+createElementFinal('div',createElementFinal('p', '반갑습니다'));
 
 //정답
 // 값이 함수가 될수있다.

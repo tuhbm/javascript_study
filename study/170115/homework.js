@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 function max(arr){
     var length = arguments.length;
     var result = 0;
@@ -79,7 +79,7 @@ var state = {
 function vendingM(){
 
 }
-=======
+
 //max,min,sum 개선
 
 //함수 선언시 암묵적으로 arguments 와 this가 존재
@@ -124,4 +124,17 @@ max([1,24,21,5,21,56,32,6,36]);
 max(1,24,21,5,21,56,32,6,36);
 sum([1,24,21,5,21,56,32,6,36]);
 sum(1,24,21,5,21,56,32,6,36);
->>>>>>> 3b70edbbbd1bfb1dd89184b6b3ea471e77aea80f
+
+
+
+var math = {
+    min :function(){
+        var arr = typeof arguments[0] === 'number' ? arguments : arguments[0];
+        var maxNum = arr[0];
+        for (var i = 0; i < arr.length; i++) {
+            if(maxNum < arr[i]) maxNum = arr[i];
+        }
+        return maxNum;
+
+    }
+};

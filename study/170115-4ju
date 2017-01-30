@@ -4,7 +4,6 @@ this 와 arguments
 arguments = 인자(객체)
 인자가 몇개가 들어오든 배열형태로 반환한
 
-
 this = this는 선언된 시점의 것
 
 call

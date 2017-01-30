@@ -2,31 +2,39 @@ var data = {
     "fruits":[{
         "name":"사과",
         "quantity":30,
-        "price":500
+        "price":500,
+        "country of origin":"대한민국"
     }, {
         "name":"바나나",
         "quantity":40,
-        "price":1500
+        "price":1500,
+        "country of origin":"필리핀"
     }, {
         "name":"딸기",
         "quantity":25,
-        "price":2000
+        "price":2000,
+        "country of origin":"대한민국"
     }, {
         "name":"포도",
         "quantity":55,
-        "price":1800
+        "price":1800,
+        "country of origin":"칠레"
     }, {
         "name":"키위",
         "quantity":100,
-        "price":4200
+        "price":4200,
+        "country of origin":"미국"
     }, {
         "name":"수박",
         "quantity":15,
-        "price":9800
+        "price":9800,
+        "country of origin":"대한민국"
     }, {
         "name":"감",
         "quantity":250,
-        "price":2300
+        "price":2300,
+        "country of origin":"대한민국"
+
     }],
     "numbers":[50, 20, 123, 12, 33, 46, 70, 21, 56, 560],
     "stringNumbers":["50", "20", "123", "12", "33", "46", "70", "21", "56", "560"]
@@ -58,21 +66,34 @@ var priceAlign = fruits.sort(function(a,b){
 console.log(priceAlign);
 
 //4번 0
-var addUnit =fruits.map(function(unit){
+var addUnit = fruits.map(function(unit){
     unit = "name:'"+unit.name+"', quantity:'"+unit.quantity+"개'"+", price:'"+unit.price+"원'";
     return unit;
 });
 console.log(addUnit);
 
 //5번
-var addProperty = fruits.map(function(add){
-    //add = "<tr><td>"+add.name+"</td><td>"+add.quantity+"</td><td>"+add.price+"</td></tr>"
-    //var result = add;
-    //result.join('<table>',add,'</table>');
-    var result = JSON.stringify(add)
-    result = "<tr><td>"+add.name+"</td><td>"+add.quantity+"</td><td>"+add.price+"</td></tr>"
-    result.join
-    return result;
-})
+// var addProperty = fruits.map(function(add){
+//     add = "<tr><td>"+add.name+"</td><td>"+add.quantity+"</td><td>"+add.price+"</td></tr>"
+//     return add;
+// });
 
+//6번
+var addProperty = fruits.map(function(add){
+    for(property in add){
+
+        //console.log(add.property.length);
+        add = "<tr><td>"+add[property]+"</td></tr>";
+
+    }
+    // add = "<tr><td>"+add.name+"</td><td>"+add.quantity+"</td><td>"+add.price+"</td></tr>"
+    return add;
+});
 console.log(addProperty);
+function addTable(){
+    var str = "<table>";
+    str += addProperty.join('');
+    str += "</table>"
+    return str;
+}
+//console.log(addTable(addProperty));
